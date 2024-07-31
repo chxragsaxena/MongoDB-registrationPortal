@@ -4,7 +4,7 @@ require('dotenv').config();
 const dbconnection=async()=>{
     try{
         mongoose.set("strictQuery", false);
-        await mongoose.connect("mongodb+srv://newarjun2892003:arjun@cluster0.e2cpx1o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",()=>{
+        await mongoose.connect("mongodb://localhost:27017",()=>{
             console.log("db connection successful");
         });
     }
